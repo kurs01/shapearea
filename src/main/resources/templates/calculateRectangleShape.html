@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Calculate Rectangle Shape</title>
+</head>
+<body>
+<h1>Calculate Rectangle Shape</h1>
+<form action="#" th:action="@{/calculateRectangleShape}" method="post">
+    <div>
+        <label>Horisontal Side</label>
+        <input th:name="hside" type="text"/>
+        <label>Vertical Side</label>
+        <input th:name="vside" type="text"/>
+    </div>
+    <div>
+        <button type="submit">Calculate</button>
+    </div>
+
+</form>
+<div th:if="${visibleResult}">
+    <table>
+        <td>
+            <label>Area is </label>
+        </td>
+        <td>
+            <p th:text="${result}" />
+        </td>
+    </table>
+</div>
+
+<a href="/">Go Home</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Calculate Circle Shape</title>
+</head>
+<body>
+<h2>Calculate Circle Shape</h2>
+
+<form action="#" th:action="@{/calculateCircleShape}" method="post">
+    <div>
+        <label>Radius</label>
+        <input th:name="radius" type="text"/>
+    </div>
+    <div>
+        <button type="submit">Calculate</button>
+    </div>
+</form>
+<div th:if="${visibleResult}">
+    <table>
+        <td>
+            <label>Area is </label>
+        </td>
+        <td>
+            <p th:text="${result}" />
+        </td>
+    </table>
+</div>
+
+<a href="/">Go Home</a>
+</body>
+</html>
